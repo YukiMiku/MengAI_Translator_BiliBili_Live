@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI萌译酱 Dock</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#e9eef7;background:#0f141b}
+*{box-sizing:border-box}
+body{margin:0;background:#0f141b;height:100vh;display:flex;flex-direction:column}
+.head{padding:10px 14px;border-bottom:1px solid #252d38;display:flex;justify-content:space-between;align-items:center;background:#141a23}
+.head .t{font-weight:700;font-size:14px}
+.head .s{font-size:11px;color:#8d98a8}
+.tag{font-size:11px;color:#8d98a8;border:1px solid #2b3441;border-radius:8px;padding:3px 8px}
+.feed{flex:1;overflow-y:auto;padding:10px 12px}
+.msg{padding:7px 9px;border:1px solid #1f2731;background:#151b23;border-radius:9px;margin-bottom:7px}
+.meta{display:flex;gap:8px;align-items:center;font-size:11px;color:#8d98a8;margin-bottom:2px}
+.meta .user{color:#c9d4e2;font-weight:600}
+.raw{font-size:14px;color:#eef4ff;word-break:break-all}
+.tr{font-size:13px;color:#8dc1ff;margin-top:2px;word-break:break-all}
+.tr.pending{color:#6e7a89}
+.tr.error{color:#ff8080}
+</style>
+</head>
+<body>
+<div class="head">
+  <div><div class="t" id="title">AI萌译酱 主播监控</div><div class="s" id="sub">仅供主播监控 · 原文 + 日语翻译</div></div>
+  <div class="tag" id="status">未连接</div>
+</div>
+<div class="feed" id="feed"></div>
+<script src="/dock.js"></script>
+</body>
+</html>
