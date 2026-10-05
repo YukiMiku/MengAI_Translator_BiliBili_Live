@@ -18,7 +18,7 @@ REM
 REM   Point PS1_URL at your own repository after uploading.
 REM ============================================================
 
-set "PS1_URL=https://raw.githubusercontent.com/YOUR-NAME/YOUR-REPO/main/install.ps1"
+set "PS1_URL=https://raw.githubusercontent.com/YukiMiku/MengAI_Translator_BiliBili_Live/blob/main/install.ps1"
 
 echo ============================================================
 echo    MengAI Translator for BiliBili Live
