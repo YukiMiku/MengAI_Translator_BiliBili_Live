@@ -1,0 +1,2 @@
+# MengAI_Translator_BiliBili_Live
+ビリビリ動画の配信ルームのコメントをAIで翻訳できる用語集付きツール、すべてのコードはdeepseekにより生成しました。
