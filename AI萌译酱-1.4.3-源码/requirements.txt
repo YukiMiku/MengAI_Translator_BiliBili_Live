@@ -1,0 +1,27 @@
+# 本プログラムはサードパーティ製ライブラリを必要としません（追加インストール不要）。
+#
+# - 本体（コメント取得・翻訳・デスクトップウィンドウ）は Python 標準ライブラリ
+#   （tkinter を含む）だけで動作します。
+# - DeepSeek / ChatGPT の Web 版は、システムにインストール済みの Chrome / Edge を
+#   そのまま使います（ブラウザのデバッグプロトコル経由）。
+#   playwright / selenium などの追加インストールは不要です。
+#
+# ---- 1.4.0 で追加：ピンインルビ ----------------------------------------
+# ピンイン（拼音）の変換には pypinyin を使いますが、**同梱済み**です。
+#   lib/pypinyin/            本体（純 Python、C 拡張なし）
+#   lib/pypinyin/LICENSE.txt MIT ライセンス（同梱物の帰属表示）
+#   lib/pypinyin-0.55.0.dist-info/  配布情報
+# → pip install は不要です。lib/ は起動時に自動で sys.path に入ります。
+#    作者: mozillazg / https://github.com/mozillazg/python-pinyin
+#
+# したがってこのファイルは空のままです。start.bat が何かをダウンロードすることは
+# ありません。必要なのは python.org の公式 Python 3.9 以上（tcl/tk を含む）だけです。
+
+# ---- 随包附带的 lib\pypinyin 做过的精简（都会在自检里验证）----------------
+#   已删除：*.pyi 类型存根 / __pyinstaller\（打 exe 的钩子）/ tools\（命令行工具）
+#           / __main__.py / runner.py
+#   必须保留：contrib\  ← 实测删掉会让 lazy_pinyin 直接 ModuleNotFoundError；
+#             其余 .py 与两个词典 JSON（phrases_dict.json / pinyin_dict.json）也是必需的。
+#   这两处一删一留都跑过自检与真实调用验证（音乐/银行/长的 等多音字）。
+#   注意：两个安装器脚本（install.bat / install.ps1）不在本包内，
+#   它们放在 GitHub 仓库根目录，与本包版本无关，正常发版不用改。
