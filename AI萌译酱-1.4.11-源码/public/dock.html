@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI萌译酱 Dock</title>
+<style>
+:root{
+  --f-raw:14px; --f-py:12px; --f-tr:13px;
+  font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#e9eef7;background:#0f141b
+}
+*{box-sizing:border-box}
+body{margin:0;background:#0f141b;height:100vh;display:flex;flex-direction:column}
+.head{padding:10px 14px;border-bottom:1px solid #252d38;display:flex;justify-content:space-between;align-items:center;background:#141a23;flex:none}
+.head .t{font-weight:700;font-size:14px}
+.head .s{font-size:11px;color:#8d98a8}
+.tag{font-size:11px;color:#8d98a8;border:1px solid #2b3441;border-radius:8px;padding:3px 8px}
+.feed{flex:1;overflow-y:auto;padding:10px 12px;min-height:0}
+.msg{padding:7px 9px;border:1px solid #1f2731;background:#151b23;border-radius:9px;margin-bottom:7px}
+.meta{display:flex;gap:8px;align-items:center;font-size:11px;color:#8d98a8;margin-bottom:2px}
+.meta .user{color:#c9d4e2;font-weight:600}
+.raw{font-size:var(--f-raw);color:#eef4ff;word-break:break-word;line-height:1.55}
+.raw ruby{ruby-position:over}
+.raw rt{font-size:var(--f-py);color:#8d98a8;font-weight:400;letter-spacing:.5px}
+.tr{font-size:var(--f-tr);color:#8dc1ff;margin-top:2px;word-break:break-word}
+.tr.pending{color:#6e7a89}
+.tr.error{color:#ff8080}
+/* ---- 礼物区（1.4.0）：不翻译，保留拼音注音 ---- */
+.gifts{flex:none;height:30vh;min-height:110px;border-top:1px solid #252d38;
+       overflow-y:auto;padding:8px 12px;background:#121821}
+.ghead{position:sticky;top:-8px;background:#121821;padding:2px 0 6px;
+       font-size:11px;color:#8d98a8;display:flex;gap:8px;align-items:center;z-index:2}
+.ghead .gl{margin-left:auto;cursor:pointer;border:1px solid #2b3441;border-radius:8px;padding:2px 8px}
+.gift{padding:5px 2px;border-bottom:1px solid #1b232d}
+.gift .gmeta{font-size:11px;color:#8d98a8}
+.gift .gpy{font-size:var(--f-py);color:#8d98a8;margin:1px 0;letter-spacing:.5px}
+.gift .gname{font-size:var(--f-raw);color:#eef4ff}
+.gift .gnum{font-size:var(--f-py);color:#8dc1ff;margin-left:6px}
+.gift.free .gname{color:#9aa6b6}
+.gift.free .gnum{color:#6e7a89}
+</style>
+</head>
+<body>
+<div class="head">
+  <div><div class="t" id="title">AI萌译酱 主播监控</div><div class="s" id="sub">仅供主播监控 · 原文 + 日语翻译</div></div>
+  <div class="tag" id="status">未连接</div>
+</div>
+<div class="feed" id="feed"></div>
+<div class="gifts" id="gifts">
+  <div class="ghead"><span id="giftTitle">礼物</span><span id="giftCount"></span>
+    <span class="gl" id="giftMore">载入更早</span></div>
+  <div id="giftList"></div>
+</div>
+<script src="/dock.js"></script>
+</body>
+</html>

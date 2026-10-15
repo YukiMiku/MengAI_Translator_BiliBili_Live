@@ -1,0 +1,31 @@
+
+===== 【内部错误】处理消息时出错（2026-10-12 16:40:41） =====
+Traceback (most recent call last):
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 2604, in _poll
+    self._handle_msg(self.gui_queue.get_nowait())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 2691, in _handle_msg
+    self._on_gift(msg[1])
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 3332, in _on_gift
+    self._gift_follow()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'App' object has no attribute '_gift_follow'. Did you mean: '_gift_follow_at'?
+
+
+===== 【内部错误】处理消息时出错（2026-10-12 16:40:41） =====
+Traceback (most recent call last):
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 2604, in _poll
+    self._handle_msg(self.gui_queue.get_nowait())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 2691, in _handle_msg
+    self._on_gift(msg[1])
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "J:\Deepseek Harness\AI萌译酱-1.4.4-源码\app.py", line 3332, in _on_gift
+    self._gift_follow()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'App' object has no attribute '_gift_follow'. Did you mean: '_gift_follow_at'?
+
+
+===== 【内部错误】预设恢复 SESSDATA（2026-10-12 20:48:59） =====
+name 'unprotect_text' is not defined
